@@ -1,0 +1,32 @@
+{% extends "main.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static',filename='prof.css')}}">
+<main role="main" class="container">
+    <div class="wrapper">
+        <section>
+            <div class="content">
+                <h1>Edit info</h1>
+                <hr>
+                <form method="post" enctype="multipart/form-data">
+                    <div class="profile-pic-div" style="left: 50%;">
+                        <img src="{{img}}" id="photo" name="alica">
+                        <input type="file" id="file" name="file">
+                        <label for="file" id="uploadBtn">Choose Photo</label>
+                    </div>
+                    <script src="static/app.js"></script>
+                    <div class="list" style="left: 41%;">
+                        <ul>
+                            <li><a>Name: <input class="form-control" type="text" placeholder="{{user.name}}" aria-label="default input example" name="name"></a></li>
+                            <hr class="info">
+                            <li><a>Mail: <input class="form-control" type="email" placeholder="{{user.email}}" aria-label="default input example" name="email"></a></li>
+                        </ul>
+                    </div>
+                    <div class="button">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}

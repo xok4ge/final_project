@@ -1,0 +1,52 @@
+{% extends "main.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static',filename='prof.css')}}">
+<main role="main" class="container">
+    <div class="wrapper">
+        <section>
+            <div class="content">
+                <h1>Account</h1>
+                <hr>
+                <div class="profile-pic-div">
+                    <img src="{{img}}" id="photo">
+                </div>
+                <div class="list">
+                    <ul>
+                        <li><a>Name: {{user.name}}</a></li>
+                        <hr class="info">
+                        <li><a>Registration date: {{user.created_date.date()}}</a></li>
+                        <hr class="info">
+                        <li class="nav-item"><a>Mail: {{user.email}}</a></li>
+                        <hr class="info">
+                        <li><a>Rating: 0</a></li>
+                    </ul>
+                </div>
+                <div class="opportunities">
+                    <div class="list-group">
+                      <a href="/edit_prof" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Edit profile info</h5>
+                        </div>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Change password</h5>
+                        </div>
+                      </a>
+                      <a href="/prof_stixi/1" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Edit posts</h5>
+                        </div>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Draft</h5>
+                        </div>
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}

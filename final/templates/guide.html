@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
+<section>
+    <div class="content">
+        <hr>
+        <h1 class="guide">Как писать хокку</h1>
+        <hr>
+        <p class="guide">Хайку – национальная японская форма поэзии, жанр поэтической миниатюры, просто, лаконично, ёмко и достоверно изображающий природу и человека в их нерасторжимом единстве.</p>
+        <pre>Гром прогремел -
+            Словно хлопнула дверью и ушла
+            Любимая навеки...
+        <em>    Нодзава Сэцуко</em></pre>
+    </div>
+</section>
+{% endblock %}
+
