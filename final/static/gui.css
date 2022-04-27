@@ -1,0 +1,86 @@
+section {
+  background: rgb(128 155 144);
+  height: 1500px;
+  margin-left: auto;
+  margin-top: 5%;
+  margin-right: auto;
+  max-width: 720px;
+  padding-top: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5)
+}
+
+npm i bootstrap-icons
+
+H1.guide {
+text-align: center
+margin: auto}
+
+P.guide {
+text-align: center}
+
+pre {
+    word-wrap: break-word;
+    white-space: pre-line;
+    background: #EDEDED;
+    border: solid 3px #b5b1c5;
+    padding: 0.75em;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: block;
+    font-family: monospace;
+}
+
+em {
+    font-style: italic;
+    margin-left: 7%;
+}
+
+.mdl-card {
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 400;
+    min-height: 170px;
+    overflow: hidden;
+    width: 700px;
+    z-index: 1;
+    position: relative;
+    background: rgb(232 228 207);
+    border-radius: 2px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+hr.mezh {
+visibility: hidden; }
+
+p.post {
+margin-left: 2%;
+margin-top: 3%;
+}
+
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
+
+div.content {
+    background: rgb(233 228 207);
+    height: 1450px;
+    margin-left: auto;
+    padding-top: 2%;
+    margin-right: auto;
+    max-width: 720px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+    }
+
+p.text {
+    text-align: left;
+    margin-left: 2%;
+}
