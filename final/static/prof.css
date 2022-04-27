@@ -125,3 +125,10 @@ div.button {
     background-color: #748c82;
     border-color: #e9e4cf;
 }
+
+p.pass {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0;
+    margin-bottom: 0rem;
+}

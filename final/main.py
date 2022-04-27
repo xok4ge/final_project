@@ -201,7 +201,6 @@ def prof_stixi(id):
     return render_template('user_index.html', content=con, users=user, pages=mnozh, active=id)
 
 
-
 @app.route('/stix_edit/<int:id>', methods=['GET', 'POST'])
 @login_required
 def edit_stix(id):
@@ -243,6 +242,24 @@ def stix_delete(id):
     else:
         abort(404)
     return redirect('/prof_stixi/1')
+
+
+@app.route('/change_pass', methods=['GET', 'POST'])
+@login_required
+def change_pass():
+    if request.method == "GET":
+        return render_template('change_pass.html')
+
+    if request.method == "POST":
+        db_sess = db_session.create_session()
+        user = db_sess.query(User).get(current_user.id)
+        print(request.form['1'])
+        print(request.form['2'])
+        if request.form['1'] == request.form['2']:
+            user.set_password(request.form['1'])
+            db_sess.commit()
+            return redirect('/profile')
+        return render_template('change_pass.html', message='Пароли не совпадают')
 
 
 if __name__ == '__main__':
