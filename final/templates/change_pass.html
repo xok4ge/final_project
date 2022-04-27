@@ -1,0 +1,28 @@
+{% extends "main.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static',filename='prof.css')}}">
+<main role="main" class="container">
+    <div class="wrapper">
+        <section>
+            <div class="content" style="margin-top:">
+                <h1>Change password</h1>
+                <hr>
+                <form method="post">
+                    <p class="pass">
+                        Пароль
+                        <br><input type="password" class="form-control" name="1" placeholder="Password"><br>
+                    </p>
+                    <p class="pass">
+                        Повторите пароль
+                        <br><input type="password" class="form-control" name="2" placeholder="Password"><br>
+                    </p>
+                    <p style="margin-left: 5%">{{message}}</p>
+                    <div class="button" style="margin-top: 15%">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}
